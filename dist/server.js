@@ -42,6 +42,10 @@ mongoose_1.default
     app.listen(PORT, () => {
         console.log(`"🚀 ~ [server]: Server running on port ${PORT}"`);
     });
+    /** ADD DATA ONCE */
+    // User.insertMany(dataUser);
+    // Product.insertMany(dataProduct);
+    // ProductStats.insertMany(dataProductStat);
 })
     .catch((err) => {
     `🚀 ~ [server]: Error connecting to database: ${err}`;
