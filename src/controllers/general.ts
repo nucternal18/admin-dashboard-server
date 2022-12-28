@@ -15,6 +15,8 @@ const getUser = async (req: Request, res: Response) => {
     }
 };
 
+
+
 export const generalController = {
     getUser,
 };

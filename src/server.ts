@@ -15,7 +15,8 @@ import salesRoutes from "./routes/sales";
 import User from "./models/User";
 import Product from "./models/Product";
 import ProductStats from "./models/ProductStats";
-import { dataUser, dataProduct, dataProductStat } from "./data";
+import Transaction from "./models/Transaction";
+import { dataUser, dataProduct, dataProductStat, dataTransaction } from "./data";
 
 // load env variables
 dotenv.config();
@@ -54,6 +55,7 @@ mongoose
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStats.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
   })
   .catch((err) => {
     `🚀 ~ [server]: Error connecting to database: ${err}`
