@@ -47,6 +47,7 @@ mongoose_1.default
     // Product.insertMany(dataProduct);
     // ProductStats.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
 })
     .catch((err) => {
     `🚀 ~ [server]: Error connecting to database: ${err}`;

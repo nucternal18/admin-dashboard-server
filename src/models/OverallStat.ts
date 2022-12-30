@@ -1,33 +1,29 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const ProductStatsSchema = new mongoose.Schema(
+const OverallStatSchema = new mongoose.Schema(
   {
-    productId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
+    totalCustomers: {
+        type: Number,
     },
     yearlySalesTotal: {
-      type: Number,
+        type: Number,
     },
     yearlyTotalSoldUnits: {
-      type: Number,
+        type: Number,
     },
     year: {
-      type: Number,
+        type: Number
     },
     monthlyData: [
       {
         month: {
           type: String,
-
         },
         totalSales: {
           type: Number,
-
         },
         totalUnits: {
           type: Number,
-
         },
       },
     ],
@@ -35,24 +31,23 @@ const ProductStatsSchema = new mongoose.Schema(
       {
         date: {
           type: String,
-
         },
         totalSales: {
           type: Number,
-
         },
         totalUnits: {
           type: Number,
-
         },
       },
     ],
+    salesByCategory: {
+        type: Map,
+        of: Number
+    }
   },
   { timestamps: true }
 );
 
-const ProductStats =
-  mongoose.models.ProductStats ||
-  mongoose.model("ProductStats", ProductStatsSchema);
+const OverallStat = mongoose.models.OverallStat ||  mongoose.model('OverallStat', OverallStatSchema);
 
-export default ProductStats;
+export default OverallStat;
