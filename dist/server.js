@@ -20,7 +20,7 @@ dotenv_1.default.config();
 // create a new express app instance
 const app = (0, express_1.default)();
 // define PORT
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 // configure the app to use bodyParser()
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.json());

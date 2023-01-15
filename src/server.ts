@@ -26,7 +26,7 @@ dotenv.config();
 const app: express.Application = express();
 
 // define PORT
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 
 // configure the app to use bodyParser()
 app.use(bodyParser.urlencoded({ extended: false }));
